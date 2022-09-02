@@ -2,12 +2,19 @@
 // code your solution here
 
 const record = [
-    { year: "2015", result: "Win"},
-    { year: "2014", result: "Loss"}
+    { year: "2015", result: "W"},
+    { year: "2014", result: "L"}
 ];
 
-function superbowlWin(team){
-        return team.result === "Win";
+const winn =record.find(superbowlWin).year
+
+function superbowlWin(array){
+    for(let record of array){
+        if ( record.result === "W"){
+            return record.year;
+        }
+    }     
+    
 
 }
-return (record.find(superbowlWin));
+
